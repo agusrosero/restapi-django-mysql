@@ -76,3 +76,4 @@ class ClubViewSet(viewsets.ModelViewSet):
 
     queryset = Club.objects.all()
     serializer_class = ClubSerializer
+    
