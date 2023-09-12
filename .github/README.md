@@ -1,6 +1,6 @@
 ## Rest Api con Python, Django, Rest Framwork conectado con MySQL.
 
-### Used technology
+### Tecnologías utilizadas.
 
 - Python
     - Flask
