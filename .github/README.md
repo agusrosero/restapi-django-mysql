@@ -1,4 +1,6 @@
-## Rest Api con Python, Django, Rest Framwork conectado con MySQL.
+## Rest Api con Python, Django, Rest Framework conectado con MySQL.
+
+CRUD con framework web django, utilizando Rest Framework y MySQL como base de datos.
 
 ## Instalar dependencias
 
@@ -17,5 +19,5 @@ pip3 install -r requirements.txt
 ### Tecnologías utilizadas.
 
 - Python
-    - Flask
+  - Flask
 - MySQL
