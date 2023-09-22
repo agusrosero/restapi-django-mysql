@@ -1,8 +1,14 @@
+# Entornos virtuales
 *.env
-*.ini
 venv/
+
+# Base de datos
 db.sqlite3
+
+# Cache
 __pycache__/
 *.pyc
 */migrations/
+
+# Vs code
 .vscode/
