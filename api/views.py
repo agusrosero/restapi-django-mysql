@@ -7,8 +7,8 @@ from django.views.decorators.csrf import csrf_exempt
 from .serializer import CompanySerializer, ClubSerializer
 from rest_framework import viewsets
 
-# Create your views here.
-# Haremos vistas basadas en clases
+
+# Vistas basadas en clases
 class CompanyView(View):
 
     # dispatch se ejecuta cada que hacemos una peticion
@@ -16,6 +16,7 @@ class CompanyView(View):
     def dispatch(self, request, *args, **kwargs):
         return super().dispatch(request, *args, **kwargs)
     
+    # Obtenemos los registros.
     def get(self, request, id=0):
         if id > 0:
             companies = list(Company.objects.filter(id=id).values())
@@ -33,7 +34,7 @@ class CompanyView(View):
                 data = {'message': 'Companies not found...'}
             return JsonResponse(data)
 
-    # crear registro
+    # crear registro.
     def post(self, request):
         # print(request.body)
         jd = json.loads(request.body)
@@ -42,6 +43,7 @@ class CompanyView(View):
         data = {'message': 'Success'}
         return JsonResponse(data)
 
+    # actualizamos los registros.
     def put(self, request, id):
         jd = json.loads(request.body)
         companies = list(Company.objects.filter(id=id).values())
@@ -55,7 +57,8 @@ class CompanyView(View):
         else:
             data = {'message': 'Company not found...'}
         return JsonResponse(data)
-        
+    
+    # eliminamos los registros.
     def delete(self, request, id):
         companies = list(Company.objects.filter(id=id).values())
         if len(companies) > 0:
