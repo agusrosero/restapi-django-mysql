@@ -36,9 +36,7 @@ class CompanyView(View):
 
     # crear registro.
     def post(self, request):
-        # print(request.body)
         jd = json.loads(request.body)
-        # print(jd)
         Company.objects.create(name=jd['name'], website=jd['website'], foundation=jd['foundation'])
         data = {'message': 'Success'}
         return JsonResponse(data)
