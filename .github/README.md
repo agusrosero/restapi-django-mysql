@@ -19,5 +19,5 @@ pip3 install -r requirements.txt
 ### Tecnologías utilizadas.
 
 - Python
-  - Flask
+  - Django
 - MySQL
